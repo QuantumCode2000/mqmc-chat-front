@@ -1,0 +1,95 @@
+.chat-messages-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: #007bff 1px solid;
+  border-radius: 5px;
+  width: 50%;
+  height: 50vh;
+
+  margin: 20px;
+}
+
+.chat-messages-box .chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  border-bottom: #007bff 1px solid;
+}
+.chat-messages-box .chat-body {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.chat-messages-box .chat-body .message-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.chat-messages-box .chat-body .message-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.chat-messages-box .chat-body .message-left p {
+  
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  height: auto;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+.chat-messages-box .chat-body .message-right p {
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  height: auto;
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
+
+.chat-messages-box .chat-body .message-system p {
+  background-color: #a2a4a5;
+}
+.chat-messages-box .chat-body .message-user p{
+  background-color: #007bff;
+}
+.chat-messages-box .chat-body .message-investigador p{
+  background-color: #a4da97;
+}
+
+.chat-messages-box .chat-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  border-top: #007bff 1px solid;
+}
+
+.chat-messages-box .chat-footer input {
+  width: 60%;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+}

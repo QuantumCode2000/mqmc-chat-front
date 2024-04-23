@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container .box-join-room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: #007bff 1px solid;
+  border-radius: 5px;
+  width: 50%; 
+  padding: 20px;
+  height: fit-content;
+
+}
+
+.container .header-unirme-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.container  input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+  
+
+}
+.container  button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  border-radius: 5px;
+
+}
+
+
