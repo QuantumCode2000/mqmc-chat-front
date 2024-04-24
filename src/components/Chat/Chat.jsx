@@ -4,7 +4,7 @@ import { IoSend } from "react-icons/io5";
 // import { FaMicrophoneSlash } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import "./Chat.css";
-const API_KEY = "sk-proj-BPmiUApw9Ie6Ggh8RsH5T3BlbkFJ8QuTgZwsq2PyJ1ilMZXi";
+
 const systemMessage = {
   role: "system",
   content: data_train,
@@ -16,14 +16,14 @@ const Chat = ({ socket, username, room }) => {
     username === "Investigador"
       ? []
       : [
-          {
-            content: "Hola, soy el bot de MQMC, ¿en qué puedo ayudarte?",
-            room,
-            username: "MQMC",
-            author: "MQMC",
-            sender: "MQMC",
-          },
-        ]
+        {
+          content: "Hola, soy el bot de MQMC, ¿en qué puedo ayudarte?",
+          room,
+          username: "MQMC",
+          author: "MQMC",
+          sender: "MQMC",
+        },
+      ]
   );
   const [usersInRoom, setUsersInRoom] = useState(1);
   useEffect(() => {
@@ -126,13 +126,11 @@ const Chat = ({ socket, username, room }) => {
           return (
             <div
               key={index}
-              className={`${
-                message.author === username ? "message-right" : "message-left"
-              }
-                ${
-                  message.sender === "MQMC"
-                    ? "message-system"
-                    : message.author === "Investigador"
+              className={`${message.author === username ? "message-right" : "message-left"
+                }
+                ${message.sender === "MQMC"
+                  ? "message-system"
+                  : message.author === "Investigador"
                     ? "message-investigador"
                     : "message-user"
                 }
