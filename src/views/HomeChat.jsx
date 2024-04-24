@@ -46,11 +46,13 @@ import { useState } from "react";
 import io from "socket.io-client";
 // const socket = io("http://localhost:3001");
 import Chat from "../components/Chat/Chat";
+import Questions from "./Questions";
 
 const HomeChat = ({ socket }) => {
     const [username, setUsername] = useState("");
     const [room, setRoom] = useState("");
     const [showChat, setShowChat] = useState(false);
+    const [isJoven, setIsJoven] = useState(false); // [1
     const generateRoom = () => {
         // Genera un número de sala aleatorio
         const newRoom = Math.floor(Math.random() * 1000) + 1;
@@ -66,27 +68,35 @@ const HomeChat = ({ socket }) => {
 
     return (
         <div className="container">
-            {!room && ( // Si no hay número de sala generado, muestra el botón para generarlo
-                <div className="box-generate-room">
-                    <h3>Generar Número de Sala</h3>
-                    <button onClick={generateRoom}>Generar Sala</button>
-                </div>
+            {isJoven === false ? (
+                <Questions setIsJoven={setIsJoven} />
+            ) : (
+                <>
+                    {!room && (
+                        <div className="box-generate-room">
+                            <h3>
+                                Hola como estas deseas charlar conmigo....</h3>
+                            <button onClick={generateRoom}>
+                                Si
+                            </button>
+                        </div>
+                    )}
+                    {room && !showChat && (
+                        <div className="box-join-room">
+                            <input
+                                className="input-username"
+                                type="text"
+                                placeholder="Como puedo llamarte ....?"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                            />
+                            <button onClick={joinRoom}>Empezar la conversación </button>
+                            {/* <button onClick={joinRoom}>Empezar la conversación {room}</button> */}
+                        </div>
+                    )}
+                </>
             )}
-            {(
-                room && !showChat
-            ) && ( // Si hay número de sala generado, muestra el formulario para ingresar el nombre de usuario
-                    <div className="box-join-room">
-                        <h3>Responder Usuario</h3>
-                        <input
-                            className="input-username"
-                            type="text"
-                            placeholder="Nombre de usuario"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-                        />
-                        <button onClick={joinRoom}>Unirme a Sala {room}</button> {/* Muestra el número de sala generado */}
-                    </div>
-                )}
+
             {showChat && <Chat socket={socket} username={username} room={room} />}
         </div>
     );

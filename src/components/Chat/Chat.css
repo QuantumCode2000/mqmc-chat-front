@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Chathura:wght@100;300;400;700;800&family=Exo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech+Mono&display=swap");
 .chat-messages-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  border: #007bff 1px solid;
+  border: #12c185 1px solid;
   border-radius: 5px;
   width: 50%;
   height: 50vh;
-
+  font-family: "Share Tech Mono", monospace;
   margin: 20px;
+  background-color: #e5e5e5;
 }
 
 .chat-messages-box .chat-header {
@@ -18,7 +20,7 @@
   justify-content: center;
   height: 10%;
   width: 100%;
-  border-bottom: #007bff 1px solid;
+  border-bottom: #12c185 1px solid;
 }
 .chat-messages-box .chat-body {
   display: flex;
@@ -44,7 +46,6 @@
   width: 100%;
 }
 .chat-messages-box .chat-body .message-left p {
-  
   color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -70,26 +71,47 @@
 .chat-messages-box .chat-body .message-system p {
   background-color: #a2a4a5;
 }
-.chat-messages-box .chat-body .message-user p{
-  background-color: #007bff;
+.chat-messages-box .chat-body .message-user p {
+  background-color: #187ef5;
 }
-.chat-messages-box .chat-body .message-investigador p{
+.chat-messages-box .chat-body .message-investigador p {
   background-color: #a4da97;
 }
 
 .chat-messages-box .chat-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 80% 10% 10%;
   height: 10%;
   width: 100%;
-  border-top: #007bff 1px solid;
+  border-top: #12c185 1px solid;
+  padding-bottom: 10px;
+
 }
 
-.chat-messages-box .chat-footer input {
-  width: 60%;
-  border: 1px solid #007bff;
+.chat-messages-box .chat-footer .input-message input {
+  width: 80%;
+  border: 1px solid #12c185;
   border-radius: 5px;
   outline: none;
+}
+
+.chat-messages-box .chat-footer .input-message{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+  margin: 0px;
+}
+
+.chat-messages-box .chat-footer .send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.chat-messages-box .chat-footer .microfone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
