@@ -4,7 +4,7 @@ import { IoSend } from "react-icons/io5";
 // import { FaMicrophoneSlash } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import "./Chat.css";
-
+const API_KEY = "sk-proj-BPmiUApw9Ie6Ggh8RsH5T3BlbkFJ8QuTgZwsq2PyJ1ilMZXi";
 const systemMessage = {
   role: "system",
   content: data_train,
