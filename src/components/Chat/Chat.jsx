@@ -1,14 +1,13 @@
 import { data_train } from "./data_train";
 import { IoSend } from "react-icons/io5";
-import { FaMicrophone } from "react-icons/fa";
-import { FaMicrophoneSlash } from "react-icons/fa";
+// import { FaMicrophone } from "react-icons/fa";
+// import { FaMicrophoneSlash } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import "./Chat.css";
-const API_KEY = "sk-proj-SnFcLiY3idOvuWThnxu7T3BlbkFJGH6JJY4OyjTEkwlNrOEK";
+const API_KEY = "sk-proj-BPmiUApw9Ie6Ggh8RsH5T3BlbkFJ8QuTgZwsq2PyJ1ilMZXi";
 const systemMessage = {
   role: "system",
-  content:
-    "Explain things like you're talking to a software professional with 2 years of experience.",
+  content: data_train,
 };
 
 const Chat = ({ socket, username, room }) => {
@@ -17,14 +16,14 @@ const Chat = ({ socket, username, room }) => {
     username === "Investigador"
       ? []
       : [
-        {
-          content: "Hola, soy el bot de MQMC, ¿en qué puedo ayudarte?",
-          room,
-          username: "MQMC",
-          author: "MQMC",
-          sender: "MQMC",
-        },
-      ]
+          {
+            content: "Hola, soy el bot de MQMC, ¿en qué puedo ayudarte?",
+            room,
+            username: "MQMC",
+            author: "MQMC",
+            sender: "MQMC",
+          },
+        ]
   );
   const [usersInRoom, setUsersInRoom] = useState(1);
   useEffect(() => {
@@ -37,7 +36,7 @@ const Chat = ({ socket, username, room }) => {
   }, [socket]);
 
   const sendMessage = async () => {
-    if (usersInRoom === 1) {
+    if (usersInRoom === 1 && username !== "Investigador") {
       if (username && room) {
         const infoMessage = {
           room,
@@ -117,19 +116,23 @@ const Chat = ({ socket, username, room }) => {
 
   return (
     <div className="chat-messages-box">
-      <section className="chat-header">
-        <h2>{`Sala: ${room} - Usuario: ${username}`}</h2>
-      </section>
+      {username === "Investigador" ? (
+        <section className="chat-header">
+          <h2>{`Sala: ${room} - Usuario: ${username}`}</h2>
+        </section>
+      ) : null}
       <section className="chat-body">
         {messagesList.map((message, index) => {
           return (
             <div
               key={index}
-              className={`${message.author === username ? "message-right" : "message-left"
-                }
-                ${message.sender === "MQMC"
-                  ? "message-system"
-                  : message.author === "Investigador"
+              className={`${
+                message.author === username ? "message-right" : "message-left"
+              }
+                ${
+                  message.sender === "MQMC"
+                    ? "message-system"
+                    : message.author === "Investigador"
                     ? "message-investigador"
                     : "message-user"
                 }

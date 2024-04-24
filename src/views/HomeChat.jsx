@@ -54,7 +54,6 @@ const HomeChat = ({ socket }) => {
     const [showChat, setShowChat] = useState(false);
     const [isJoven, setIsJoven] = useState(false); // [1
     const generateRoom = () => {
-        // Genera un número de sala aleatorio
         const newRoom = Math.floor(Math.random() * 1000) + 1;
         setRoom(newRoom.toString()); // Convierte el número de sala en una cadena de texto
     };

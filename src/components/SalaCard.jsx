@@ -5,7 +5,11 @@ const SalaCard = ({ sala, joinRoom, index }) => {
 
         <div
             className="ag-courses_item"
-            onClick={() => joinRoom(sala)}
+            onClick={
+                () => {
+                    joinRoom(sala);
+                }
+            }
             key={index}
         >
             <a href="#" className="ag-courses-item_link">

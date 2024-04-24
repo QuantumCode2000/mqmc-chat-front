@@ -102,6 +102,19 @@
   padding:0;
   margin: 0px;
 }
+.chat-messages-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: #12c185 1px solid;
+  border-radius: 5px;
+  width: 70%;
+  height: 90%;
+  font-family: "Share Tech Mono", monospace;
+  
+  background-color: #e5e5e5;
+}
 
 .chat-messages-box .chat-footer .send {
   display: flex;
