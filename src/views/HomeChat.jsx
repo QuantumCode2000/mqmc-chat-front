@@ -47,6 +47,7 @@ import io from "socket.io-client";
 // const socket = io("http://localhost:3001");
 import Chat from "../components/Chat/Chat";
 import Questions from "./Questions";
+import "./HomeChat.css";
 
 const HomeChat = ({ socket }) => {
     const [username, setUsername] = useState("");
@@ -95,8 +96,9 @@ const HomeChat = ({ socket }) => {
                     )}
                 </>
             )}
-
+        {/* <div className="chatbot"> */}
             {showChat && <Chat socket={socket} username={username} room={room} />}
+        {/* </div> */}
         </div>
     );
 };

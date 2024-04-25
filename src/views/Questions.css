@@ -1,0 +1,76 @@
+h1 {
+    color: rgb(15, 12, 12);
+    font-family: "Caveat", cursive !important;
+    font-size: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+h1 button {
+    font-size: 2rem;
+    color: black !important;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem !important;
+    background-color: #6ff687 !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+
+}
+
+.questions-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    background: linear-gradient(to right, rgb(190, 194, 78), rgba(50, 185, 180, 0.881));
+    padding: 2rem;
+    border-radius: 1.5rem;
+    
+    
+    
+}
+
+.questions-filter label {
+    width: 50%;
+    font-size: 1rem;
+    text-align: center;
+    
+    
+}
+
+.questions-filter select {
+    width: 40%;
+    height: 2.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #12dc37;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+
+.questions-filter button {
+    width: 20%;
+    font-size: 1rem;
+    color: black !important;
+    font-weight: bold;
+    margin-top: 1rem;
+    background: linear-gradient(to right, rgb(235, 241, 61), rgba(172, 215, 150, 0.881))!important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40%;
+}

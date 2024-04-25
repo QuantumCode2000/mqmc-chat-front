@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #93b73b;
-
+  /* background-color: rgb(249, 239, 183); */
+  background: url(https://img.freepik.com/vector-premium/burbujas-verdes-sobre-blanco_105325-158.jpg)no-repeat center/cover;
 }
 .container {
   

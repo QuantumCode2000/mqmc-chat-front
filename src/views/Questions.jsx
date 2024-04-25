@@ -1,4 +1,6 @@
 import { useState } from "react";
+import moduleName from 'module'
+import "./Questions.css";
 const Questions = ({ setIsJoven }) => {
   const [showForm, setShowForm] = useState(false);
   const [respuestas, setRespuestas] = useState({
@@ -176,7 +178,7 @@ const Questions = ({ setIsJoven }) => {
         </div>
       ) : (
         <h1>
-          Bienvenido a la soy Tatu antes de iniciar , me gustaria saber un poco
+          Bienvenido a la soy Tatu antes de iniciar, me gustaria saber un poco
           mas de ti
           <button onClick={() => setShowForm(true)}>Esta bien</button>
         </h1>
