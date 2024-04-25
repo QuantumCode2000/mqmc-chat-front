@@ -5,7 +5,7 @@
     margin-bottom: 2rem;
     /* background: rgb(249, 239, 183) url('./public/image/PORTADA_PRINCIPAL.png') no-repeat center/cover; */
     /* background-color: rgb(249, 239, 183); */
-    
+    background: url("./public/image/image2.jpg") no-repeat center/cover;
 }
 
 .container .box-generate-room {
@@ -17,7 +17,9 @@
     flex-direction: column;
     border-radius: 0.5rem !important;
     padding: 1rem;
-    background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important;
+    /* background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important; */
+    background: linear-gradient( rgba(230, 234, 236, 0), rgba(220, 240, 233, 0.881));
+
     border: 1px solid #21b53c !important;
 }
 
@@ -27,7 +29,9 @@
     color: black !important;
     font-weight: bold;
     border-radius: 0.5rem !important;
-    background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important;
+    /* background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important; */
+    
+    background: linear-gradient( rgba(230, 234, 236, 0), rgba(220, 240, 233, 0.881));
     border: 1px solid #4b8f57 !important;
     display: flex;
     align-items: center;
@@ -44,7 +48,9 @@
     flex-direction: column;
     border-radius: 0.5rem !important;
     padding: 1rem;
-    background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important;
+    /* background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important; */
+    background: linear-gradient( rgba(230, 234, 236, 0), rgba(220, 240, 233, 0.881));
+
     border: 1px solid #4b8f57 !important;
 }
 
@@ -67,7 +73,9 @@
     color: black;
     font-weight: bold;
     border-radius: 0.5;
-    background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important;
+    /* background: linear-gradient(to right, rgba(118, 211, 118, 0), rgba(103, 190, 60, 0.881))!important; */
+    background: linear-gradient( rgba(230, 234, 236, 0), rgba(220, 240, 233, 0.881));
+
     border: 1px solid #4b8f57 !important;
     cursor: pointer ;
     transition: 0.3s ;

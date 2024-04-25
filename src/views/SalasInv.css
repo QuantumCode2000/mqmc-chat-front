@@ -121,3 +121,7 @@
 .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
   background-color: #4c49ea;
 }
+
+.box {
+  background-color: white !important;
+}

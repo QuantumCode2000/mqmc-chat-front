@@ -8,6 +8,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     
+    ;
 }
 
 h1 button {
@@ -17,7 +18,9 @@ h1 button {
     margin-top: 1.5rem;
     padding: 0.5rem;
     border-radius: 0.5rem !important;
-    background-color: #6ff687 !important;
+    /* background: linear-gradient(to right, rgb(190, 194, 78), rgba(50, 185, 180, 0.881)); */
+    background: linear-gradient( rgba(250, 250, 250, 0.867), rgba(41, 225, 152, 0.881));
+
     border: none !important;
     cursor: pointer !important;
     transition: 0.3s !important;
@@ -29,7 +32,9 @@ h1 button {
     align-items: center;
     justify-content: center;
     margin-top: 10rem;
-    background: linear-gradient(to right, rgb(190, 194, 78), rgba(50, 185, 180, 0.881));
+    /* background: linear-gradient(to right, rgb(190, 194, 78), rgba(50, 185, 180, 0.881)); */
+    background: linear-gradient( rgba(230, 234, 236, 0), rgba(220, 240, 233, 0.881));
+
     padding: 2rem;
     border-radius: 1.5rem;
     
@@ -66,7 +71,9 @@ h1 button {
     color: black !important;
     font-weight: bold;
     margin-top: 1rem;
-    background: linear-gradient(to right, rgb(235, 241, 61), rgba(172, 215, 150, 0.881))!important;
+    /* background: linear-gradient(to right, rgb(235, 241, 61), rgba(172, 215, 150, 0.881))!important; */
+    background: linear-gradient( #5edfaec0, rgba(251, 251, 251, 0.881));
+
     cursor: pointer !important;
     transition: 0.3s !important;
     display: flex;

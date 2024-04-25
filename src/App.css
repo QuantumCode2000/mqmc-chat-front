@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   /* background-color: rgb(249, 239, 183); */
-  background: url(https://img.freepik.com/vector-premium/burbujas-verdes-sobre-blanco_105325-158.jpg)no-repeat center/cover;
+  /* background: url(https://static.vecteezy.com/system/resources/previews/006/262/287/non_2x/white-abstract-background-backdrop-for-presentation-design-for-website-free-photo.jpg)no-repeat center/cover; */
+  background-color: white;
 }
 .container {
   
