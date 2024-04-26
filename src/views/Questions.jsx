@@ -180,7 +180,7 @@ const Questions = ({ setIsJoven }) => {
         <h1>
           Bienvenido a la soy Tatu antes de iniciar, me gustaria saber un poco
           mas de ti
-          <button onClick={() => setShowForm(true)}>Esta bien</button>
+          <button onClick={() => setShowForm(true)}> </button>
         </h1>
       )}
     </>
