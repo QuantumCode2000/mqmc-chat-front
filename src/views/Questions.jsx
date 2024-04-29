@@ -1,5 +1,5 @@
 import { useState } from "react";
-import moduleName from 'module'
+import moduleName from "module";
 import "./Questions.css";
 const Questions = ({ setIsJoven }) => {
   const [showForm, setShowForm] = useState(false);
@@ -20,9 +20,9 @@ const Questions = ({ setIsJoven }) => {
     const values = Object.values(respuestas);
     const joven = values.filter((value) => value === "b").length;
     if (joven > 4) {
-      setIsJoven(true);
+      setIsJoven("Joven");
     } else {
-      setIsJoven(true);
+      setIsJoven("Adolecente");
     }
 
     setRespuestas({
@@ -177,8 +177,8 @@ const Questions = ({ setIsJoven }) => {
         </div>
       ) : (
         <h1>
-          Bienvenido a la soy Tatu antes de iniciar, me gustaria saber un poco
-          mas de ti
+          Bienvenido al Chat soy Tatu....!!! , antes de iniciar, me gustaria
+          saber un poco mas de ti
           <button onClick={() => setShowForm(true)}> </button>
         </h1>
       )}

@@ -1,4 +1,4 @@
-import { data_train } from "./data_train";
+import { data_train_joven,data_train_adolecente } from "./data_train";
 import { IoSend } from "react-icons/io5";
 import { FaMicrophone } from "react-icons/fa";
 import { FaMicrophoneSlash } from "react-icons/fa";
@@ -7,12 +7,8 @@ import RoomContext from "../../contexts/RoomContext/RoomContext";
 import "./Chat.css";
 
 const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
-const systemMessage = {
-  role: "system",
-  content: data_train,
-};
 
-const Chat = ({ socket, username, room }) => {
+const Chat = ({ socket, username, room, ge }) => {
   const { updateListChatRoomAvailable } = useContext(RoomContext);
   const [currentMessage, setCurrentMessage] = useState("");
   const [noUnderstandingCount, setNoUnderstandingCount] = useState(0);
@@ -29,6 +25,10 @@ const Chat = ({ socket, username, room }) => {
           },
         ]
   );
+  const systemMessage = {
+    role: "system",
+    content: ge === "Joven" ? data_train_joven : data_train_adolecente,
+  };
   const [usersInRoom, setUsersInRoom] = useState(1);
   const [speechRecognitionActive, setSpeechRecognitionActive] = useState(false); // Nuevo estado para controlar el reconocimiento de voz
 
