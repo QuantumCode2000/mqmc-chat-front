@@ -209,12 +209,14 @@ const Chat = ({ socket, username, room }) => {
           <button onClick={sendMessage}>
             <IoSend />
           </button>
+          <div className="sendvoice">
           <button
             onClick={startSpeechRecognition}
             disabled={speechRecognitionActive}
           >
             {speechRecognitionActive ? <FaMicrophoneSlash /> : <FaMicrophone />}
           </button>
+          </div>
         </div>
       </section>
     </div>

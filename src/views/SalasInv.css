@@ -31,7 +31,7 @@
 }
 
 .chat-messages-box-salas .chat-messages-box .input-message input{
-  width: 100% !important;
+  width: 90% !important;
   border: 1px solid #0aca87;
   border-radius: 15px;
   outline: none;
