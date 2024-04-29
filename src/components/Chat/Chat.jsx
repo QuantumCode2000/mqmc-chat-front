@@ -2,7 +2,8 @@ import { data_train } from "./data_train";
 import { IoSend } from "react-icons/io5";
 import { FaMicrophone } from "react-icons/fa";
 import { FaMicrophoneSlash } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import RoomContext from "../../contexts/RoomContext/RoomContext";
 import "./Chat.css";
 
 const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
@@ -12,6 +13,7 @@ const systemMessage = {
 };
 
 const Chat = ({ socket, username, room }) => {
+  const { updateListChatRoomAvailable } = useContext(RoomContext);
   const [currentMessage, setCurrentMessage] = useState("");
   const [noUnderstandingCount, setNoUnderstandingCount] = useState(0);
   const [messagesList, setMessagesList] = useState(
@@ -123,6 +125,7 @@ const Chat = ({ socket, username, room }) => {
           noUnderstandingCount >= 2 &&
           botResponse === "No entiendo la pregunta, por favor intenta de nuevo."
         ) {
+          updateListChatRoomAvailable(room);
           setMessagesList((list) => [
             ...list,
             // {
@@ -210,12 +213,16 @@ const Chat = ({ socket, username, room }) => {
             <IoSend />
           </button>
           <div className="sendvoice">
-          <button
-            onClick={startSpeechRecognition}
-            disabled={speechRecognitionActive}
-          >
-            {speechRecognitionActive ? <FaMicrophoneSlash /> : <FaMicrophone />}
-          </button>
+            <button
+              onClick={startSpeechRecognition}
+              disabled={speechRecognitionActive}
+            >
+              {speechRecognitionActive ? (
+                <FaMicrophoneSlash />
+              ) : (
+                <FaMicrophone />
+              )}
+            </button>
           </div>
         </div>
       </section>
