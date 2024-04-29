@@ -22,8 +22,7 @@ const Questions = ({ setIsJoven }) => {
     if (joven > 4) {
       setIsJoven(true);
     } else {
-      setIsJoven(false);
-      alert("Gracias por llenar el formulario");
+      setIsJoven(true);
     }
 
     setRespuestas({
