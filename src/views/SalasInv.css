@@ -31,7 +31,7 @@
 }
 
 .chat-messages-box-salas .chat-messages-box .input-message input{
-  width: 90% !important;
+  width: 80% !important;
   border: 1px solid #0aca87;
   border-radius: 15px;
   outline: none;
@@ -68,8 +68,8 @@
   border-radius: 20px;
   background-color: #eeeded;
   border: 1px solid #f9b234;
-  width: 71%;
-  margin-left: 8.4rem;
+  width: 67%;
+  margin-left: 6rem;
 }
 
 .ag-courses_item {

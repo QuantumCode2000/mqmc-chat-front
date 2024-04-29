@@ -28,6 +28,12 @@
   height: 80%;
   width: 100%;
   overflow-y: auto;
+  scroll-behavior: smooth;
+
+}
+
+.chat-messages-box .chat-body > div:last-child {
+  scroll-margin-bottom: 1px;
 }
 
 .chat-messages-box .chat-body .message-left {
