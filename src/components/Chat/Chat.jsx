@@ -1,4 +1,4 @@
-import { data_train_joven,data_train_adolecente } from "./data_train";
+import { data_train_joven, data_train_adolecente } from "./data_train";
 import { IoSend } from "react-icons/io5";
 import { FaMicrophone } from "react-icons/fa";
 import { FaMicrophoneSlash } from "react-icons/fa";
@@ -9,6 +9,7 @@ import "./Chat.css";
 const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
 
 const Chat = ({ socket, username, room, ge }) => {
+  console.log(ge);
   const { updateListChatRoomAvailable } = useContext(RoomContext);
   const [currentMessage, setCurrentMessage] = useState("");
   const [noUnderstandingCount, setNoUnderstandingCount] = useState(0);
