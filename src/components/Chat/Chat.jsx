@@ -8,8 +8,8 @@ import "./Chat.css";
 
 const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
 
-const Chat = ({ socket, username, room, ge }) => {
-  console.log(ge);
+const Chat = ({ socket, username, room, ageGroup }) => {
+  console.log(ageGroup);
   const { updateListChatRoomAvailable } = useContext(RoomContext);
   const [currentMessage, setCurrentMessage] = useState("");
   const [noUnderstandingCount, setNoUnderstandingCount] = useState(0);
@@ -28,7 +28,7 @@ const Chat = ({ socket, username, room, ge }) => {
   );
   const systemMessage = {
     role: "system",
-    content: ge === "Joven" ? data_train_joven : data_train_adolecente,
+    content: ageGroup === "Joven" ? data_train_joven : data_train_adolecente,
   };
   const [usersInRoom, setUsersInRoom] = useState(1);
   const [speechRecognitionActive, setSpeechRecognitionActive] = useState(false); // Nuevo estado para controlar el reconocimiento de voz

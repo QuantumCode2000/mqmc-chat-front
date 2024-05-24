@@ -17,6 +17,8 @@ const Questions = ({ setIsJoven }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // NOTE: segun yo esto ya no var
+    // pero hay que agregar un flag o algo para pasar del Questions
     const values = Object.values(respuestas);
     const joven = values.filter((value) => value === "b").length;
     if (joven > 4) {
