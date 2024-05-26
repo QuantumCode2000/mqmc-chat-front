@@ -1,47 +1,3 @@
-// import { useState } from "react";
-// import io from "socket.io-client";
-// const socket = io("http://localhost:3001");
-// import Chat from "../components/Chat/Chat";
-// const HomeChat = () => {
-//     const [username, setUsername] = useState("");
-//     const [room, setRoom] = useState("");
-//     const [showChat, setShowChat] = useState(false);
-//     const joinRoom = () => {
-//         if (username && room) {
-//             socket.emit("join_room", room);
-//             setShowChat(true);
-//         }
-//     };
-//     return (
-//         <div className="container">
-//             {!showChat ? (
-//                 <div className="box-join-room">
-//                     <h3 className="header-unirme-chat">Responder Usuario</h3>
-//                     <input
-//                         className="input-username"
-//                         type="text"
-//                         placeholder="Nombre de usuario"
-//                         value={username}
-//                         onChange={(e) => setUsername(e.target.value)}
-//                     />
-//                     <input
-//                         className="input-room"
-//                         type="text"
-//                         placeholder="Nombre de sala"
-//                         value={room}
-//                         onChange={(e) => setRoom(e.target.value)}
-//                     />
-//                     <button onClick={joinRoom}>Unirme a sala</button>
-//                 </div>
-//             ) : (
-//                 <Chat socket={socket} username={username} room={room} />
-//             )}
-//         </div>
-//     )
-// }
-
-// export default HomeChat
-
 import { useState } from "react";
 import io from "socket.io-client";
 // const socket = io("http://localhost:3001");
@@ -51,6 +7,7 @@ import "./HomeChat.css";
 
 const HomeChat = ({ socket }) => {
   const [username, setUsername] = useState("");
+  const [age, setAge] = useState(0)
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [isJoven, setIsJoven] = useState(""); // [1
@@ -69,7 +26,7 @@ const HomeChat = ({ socket }) => {
   return (
     <div className="container">
       {isJoven === "" ? (
-        <Questions setIsJoven={setIsJoven} />
+        <Questions setIsJoven={setIsJoven}/>
       ) : (
         <>
           {!room && (
@@ -87,6 +44,16 @@ const HomeChat = ({ socket }) => {
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
+              <input
+                className="input-username"
+                type="number"
+                placeholder="que edad tienes?"
+                value={age}
+                onChange={(e) => {
+                    (e.target.value > 12) ? setIsJoven(true) : setIsJoven(false)
+                    setAge(e.target.value)
+                  }}
+              />
               <button onClick={joinRoom}>Empezar la conversación </button>
               {/* <button onClick={joinRoom}>Empezar la conversación {room}</button> */}
             </div>
@@ -95,7 +62,7 @@ const HomeChat = ({ socket }) => {
       )}
       {/* <div className="chatbot"> */}
       {showChat && (
-        <Chat socket={socket} username={username} room={room} ge={isJoven} />
+        <Chat socket={socket} username={username} room={room} ageGroup={isJoven} />
       )}
       {/* </div> */}
     </div>
