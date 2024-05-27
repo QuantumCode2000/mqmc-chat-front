@@ -17,8 +17,7 @@ const Questions = ({ setIsJoven }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // NOTE: segun yo esto ya no var
-    // pero hay que agregar un flag o algo para pasar del Questions
+    // 
     const values = Object.values(respuestas);
     const joven = values.filter((value) => value === "b").length;
     if (joven > 4) {
@@ -142,7 +141,7 @@ const Questions = ({ setIsJoven }) => {
                 </select>
               </label>
             </div>
-            <div>
+            {/* <div>
               <label>
                 ¿Cómo prefieres comunicarte con tus amigos?
                 <br />
@@ -158,8 +157,8 @@ const Questions = ({ setIsJoven }) => {
                   </option>
                 </select>
               </label>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <label>
                 ¿Qué tipo de videojuegos prefieres jugar?
                 <br />
@@ -173,14 +172,14 @@ const Questions = ({ setIsJoven }) => {
                   <option value="b">Super Mario, Ajedrez</option>
                 </select>
               </label>
-            </div>
+            </div> */}
             <button type="submit">Enviar</button>
           </form>
         </div>
       ) : (
         <h1>
-          Bienvenido al Chat soy Tatu....!!! , antes de iniciar, me gustaria
-          saber un poco mas de ti
+          ¡Hola! soy ÁUREA, antes de comenxar me gustaria  hacerte unas preguntas para conocerte mejor.
+          Esto nos ayudara a personalizar tu experiencia. ¡Empecemos!
           <button onClick={() => setShowForm(true)}> </button>
         </h1>
       )}
