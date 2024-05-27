@@ -222,13 +222,8 @@ const Chat = ({ socket, username, room, ageGroup }) => {
             <p>
               {message.content}
               {message.video && (
-                <div>
-                  <ReactPlayer
-                    url={message.video}
-                    width={250}
-                    height={150}
-                    controls
-                  />
+                <div className="iframe-wrapper">
+                  <iframe src={message.video} allowfullscreen></iframe>
                 </div>
               )}
             </p>
