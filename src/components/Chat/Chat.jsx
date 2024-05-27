@@ -9,7 +9,7 @@ import "./Chat.css";
 const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
 
 const Chat = ({ socket, username, room, ageGroup }) => {
-  console.log(ageGroup);
+  // console.log(ageGroup);
   const { updateListChatRoomAvailable } = useContext(RoomContext);
   const [currentMessage, setCurrentMessage] = useState("");
   const [noUnderstandingCount, setNoUnderstandingCount] = useState(0);

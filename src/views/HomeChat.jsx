@@ -2,12 +2,11 @@ import { useState } from "react";
 import io from "socket.io-client";
 // const socket = io("http://localhost:3001");
 import Chat from "../components/Chat/Chat";
-import Questions from "./Questions";
 import "./HomeChat.css";
 
 const HomeChat = ({ socket }) => {
   const [username, setUsername] = useState("");
-  const [age, setAge] = useState(0)
+  const [age, setAge] = useState()
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [isJoven, setIsJoven] = useState(""); // [1
@@ -25,9 +24,6 @@ const HomeChat = ({ socket }) => {
 
   return (
     <div className="container">
-      {isJoven === "" ? (
-        <Questions setIsJoven={setIsJoven}/>
-      ) : (
         <>
           {!room && (
             <div className="box-generate-room">
@@ -59,7 +55,6 @@ const HomeChat = ({ socket }) => {
             </div>
           )}
         </>
-      )}
       {/* <div className="chatbot"> */}
       {showChat && (
         <Chat socket={socket} username={username} room={room} ageGroup={isJoven} />
