@@ -8,7 +8,7 @@ import RoomContext from "../../contexts/RoomContext/RoomContext";
 import ReactPlayer from "react-player";
 import "./Chat.css";
 
-const API_KEY = "sk-proj-PQZzNO9dNRuxMZHmBxhAT3BlbkFJLvL5uaw29S4eMhO52YwI";
+const API_KEY = "sk-proj-rMsUwuDkK8YsbZeY4l4dT3BlbkFJk6Xk9JEeOgHaYcppKP17";
 
 const Chat = ({ socket, username, room, ageGroup }) => {
   console.log("ageGroup", ageGroup);
