@@ -20,7 +20,7 @@ const Chat = ({ socket, username, room, ageGroup }) => {
       ? []
       : [
           {
-            content: "Hola, soy el bot de MQMC, ¿en qué puedo ayudarte?",
+            content: "Hola, soy el bot de ÁUREA, ¿En qué puedo ayudarte?",
             room,
             username: "MQMC",
             author: "MQMC",
